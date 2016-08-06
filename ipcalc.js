@@ -22,22 +22,22 @@ var CLASS_A_SUBNET_BITS = '<select id="subnet_bits" name="subnet_bits"><option v
 var CLASS_B_SUBNET_BITS = '<select id="subnet_bits" name="subnet_bits"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select>';
 var CLASS_C_SUBNET_BITS = '<select id="subnet_bits" name="subnet_bits"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>';
 
-var CALCULATIONS_FORM = function(values) { 
+var CALCULATIONS_FORM = function(values) {
 	return '<p class="intro">Please select your network class and enter the information to calculate your subnet configuration.</p>' +
 	'<div class="fields">' +
-	'<div class="netClass row" id="subnetClass"><div class="label"><label>Network Class</label><br/></div><div class="field"><span class="radio">A</span><input type="radio" id="netClassA" name="netClass_value" value="0" ' +
+	'<div class="netClass row" id="subnetClass"><div class="label"><label>Network Class</label></div><div class="field"><span class="radio">A</span><input type="radio" id="netClassA" name="netClass_value" value="0" ' +
 	values.selected_a + '><span class="radio radio_margin">B</span><input type="radio" id="netClassB" name="netClass_value" value="1" ' + values.selected_b + '><span class="radio radio_margin">C</span><input type="radio" id="netClassC" name="netClass_value" value="2" ' + values.selected_c + '></div></div>' +
-	'<div class="ipAdress row" id="ipAdress"><div class="label"><label for="ipAdress_value">IP Address</label><br/><span class="notice">With the format 127.0.0.1</span></div><div class="field"><input type="text" class="text" name="ipAdress_value" id="ipAdress_value" size="15" value="' + values.ipAddress + '"></div></div>' +
-	'<div class="subnetMask row" id="subnetMask"><div class="label"><label for="subnetMask_value">Subnet Mask</label><br/><span class="notice"></span></div><div class="field">' + values.subnetmask_select + '</div></div>' +
-	'<div class="hostsSubnet row" id="hostsSubnet"><div class="label"><label>Hosts per Subnet</label><br/></div><div class="field">' + values.maxHostsSelect + '</div></div>' +
-	'<div class="maxSubnets row" id="maxSubnets"><div class="label"><label>Maximum subnets</label><br/></div><div class="field">' + values.maxSubnetsSelect + '</div></div>' +
-	'<div class="maxBits row" id="maxBits"><div class="label"><label>Mask Bits</label><br/></div><div class="field">' + values.maxBitsSelect + '</div></div>' +
-	'<div class="maxBits row" id="subnetBits"><div class="label"><label>Subnet Bits</label><br/></div><div class="field">' + values.subnetBitsSelect + '</div></div> ' +
-	'<div class="information_row"><div class="label"><label>Host Address Range</label><br/></div><div class="field" id="startHostAddr">' + values.startHostAddr + '</div><div class="field separator">&nbsp;-&nbsp;</div><div class="field" id="endHostAddr">' + values.endHostAddr +
+	'<div class="ipAdress row" id="ipAdress"><div class="label"><label for="ipAdress_value">IP Address</label><span class="notice">With the format 127.0.0.1</span></div><div class="field"><input type="text" class="text" name="ipAdress_value" id="ipAdress_value" size="15" value="' + values.ipAddress + '"></div></div>' +
+	'<div class="subnetMask row" id="subnetMask"><div class="label"><label for="subnetMask_value">Subnet Mask</label><span class="notice"></span></div><div class="field">' + values.subnetmask_select + '</div></div>' +
+	'<div class="hostsSubnet row" id="hostsSubnet"><div class="label"><label>Hosts per Subnet</label></div><div class="field">' + values.maxHostsSelect + '</div></div>' +
+	'<div class="maxSubnets row" id="maxSubnets"><div class="label"><label>Maximum subnets</label></div><div class="field">' + values.maxSubnetsSelect + '</div></div>' +
+	'<div class="maxBits row" id="maxBits"><div class="label"><label>Mask Bits</label></div><div class="field">' + values.maxBitsSelect + '</div></div>' +
+	'<div class="maxBits row" id="subnetBits"><div class="label"><label>Subnet Bits</label></div><div class="field">' + values.subnetBitsSelect + '</div></div> ' +
+	'<div class="information_row"><div class="label"><label>Host Address Range</label></div><div class="field" id="startHostAddr">' + values.startHostAddr + '</div><div class="field separator">&nbsp;-&nbsp;</div><div class="field" id="endHostAddr">' + values.endHostAddr +
 	'</div></div>' +
-	'<div class="information_row"><div class="label"><label>Network Address</label><br/></div><div class="field" id="networkAddr">' + values.networkAddr + '</div></div>' +
-	'<div class="information_row"><div class="label"><label>Broadcast Address</label><br/></div><div class="field" id="broadcastAddr">' + values.broadcastAddr + '</div></div>' +
-	'<div class="information_row"><div class="label"><label>Host Address Size</label><br/></div><div class="field" id="hostAddrSize">' + values.hostAddrSize + ' bits</div></div>' +
+	'<div class="information_row"><div class="label"><label>Network Address</label></div><div class="field" id="networkAddr">' + values.networkAddr + '</div></div>' +
+	'<div class="information_row"><div class="label"><label>Broadcast Address</label></div><div class="field" id="broadcastAddr">' + values.broadcastAddr + '</div></div>' +
+	'<div class="information_row"><div class="label"><label>Host Address Size</label></div><div class="field" id="hostAddrSize">' + values.hostAddrSize + ' bits</div></div>' +
 	'</div>';
 }
 
@@ -92,8 +92,8 @@ function calculate(ipAddress,subnetMask) {
 		if ((ip4 >= (i + 1)) && (ip4 <= (i + x))){
 		var12 = (i + 2);
 		var16 = (i + (x - 1));
-		}     
-	}   
+		}
+	}
 	var10 = ip2;
 	var11 = ip3;
 	var14 = ip2;
@@ -128,7 +128,7 @@ function calculate(ipAddress,subnetMask) {
 	var15 = 255;
 	var12 = 1;
 	var16 = 254;
-	}     
+	}
 
 	document.getElementById('ipAdress_value').value = ip1+"."+ip2+"."+ip3+"."+ip4;
 	document.getElementById('startHostAddr').innerHTML = var9+"."+var10+"."+var11+"."+var12;
@@ -221,7 +221,7 @@ function initEventHandlers(){
 
 // Update All the values in the UI.
 function changeComboboxes(newVal){
-	
+
 	var option_groups = [
 		"select#subnet_mask option",
 		"select#max_hosts option",

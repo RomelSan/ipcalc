@@ -2,12 +2,12 @@
 Ipv4 Calculator
 
 ### TO DO
-- Nothing yet...
+- Maybe changing from Skeleton to BootStrap...
+- Maybe improving print.css
 
 ### License
 MIT License
 
 ### Contact
-Twitter: [@RomelSan](http://www.twitter.com/RomelSan)    
-Date: July 30, 2016 14:55
-
+Twitter: [@RomelSan](http://www.twitter.com/RomelSan)
+Date: July 30, 2016

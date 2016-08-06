@@ -1,0 +1,12 @@
+@media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+  .container {width: 50%}
+  .container .sixteen.columns {width: 100%}
+  .column,
+  .columns {
+      width: 100% !important; /** 100% of 50% container */
+      margin-left: 0% !important;
+      page-break-inside: avoid;
+  }
+}

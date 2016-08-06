@@ -7,16 +7,15 @@ div.field_set p.intro {color:#000000;font-size:1px;margin:0 0 1px;padding:0;}
 .field_set .row,
 .field_set .information_row {
 	border-bottom:1px solid #000000;
-	padding:1px 0;
+	padding:5px 0;
 }
 .field_set .row:nth-child(2n),
 .field_set .information_row:nth-child(2n) {
-	background-color:#dddddd;
+	background-color:#F4F4F4;
 }
 .field_set .information_row {
-	padding:1px 0;
+	padding:5px 0;
 }
-
 
 .row .label,
 .information_row .label {
@@ -37,9 +36,9 @@ div.field_set p.intro {color:#000000;font-size:1px;margin:0 0 1px;padding:0;}
 
 #subnetClass .radio {margin-right:1px;}
 #subnetClass .radio_margin {margin-left:10px;}
-select { 
+select {
 		height: 35px;
-		min-width: 170px; 
+		min-width: 170px;
 		max-width: 200px;
 		margin-bottom: 0.5rem;
 		}
