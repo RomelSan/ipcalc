@@ -9,5 +9,5 @@ Ipv4 Calculator
 MIT License
 
 ### Contact
-Twitter: [@RomelSan](http://www.twitter.com/RomelSan)
+Twitter: [@RomelSan](http://www.twitter.com/RomelSan)  
 Date: July 30, 2016
